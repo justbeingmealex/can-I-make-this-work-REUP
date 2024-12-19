@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Property Underwriting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        #questionForm, #results, #planSelection {
+            margin-bottom: 20px;
+        }
+        input, select, button {
+            margin: 5px 0;
+            padding: 5px;
+        }
+        #results {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI Property Underwriting</h1>
+    
+    <div id="planSelection">
+        <h2>Select Your Plan</h2>
+        <select id="plan">
+            <option value="free">Free (1 month)</option>
+            <option value="paid">Paid ($500/month)</option>
+        </select>
+    </div>
+
+    <div id="questionForm">
+        <h2>Buying Criteria</h2>
+        <input type="text" id="location" placeholder="Preferred Area">
+        <input type="number" id="budget" placeholder="Budget">
+        <input type="number" id="bedrooms" placeholder="Minimum Bedrooms">
+        <input type="number" id="bathrooms" placeholder="Minimum Bathrooms">
+        <button onclick="searchProperties()">Search Properties</button>
+    </div>
+
+    <div id="results"></div>
+
+    <script>
+        function searchProperties() {
+            // This function would integrate with APIs and AI to perform the search
+            // and underwriting calculations based on user input
+            const location = document.getElementById('location').value;
+            const budget = document.getElementById('budget').value;
+            const bedrooms = document.getElementById('bedrooms').value;
+            const bathrooms = document.getElementById('bathrooms').value;
+            const plan = document.getElementById('plan').value;
+
+            // Placeholder for API calls and AI integration
+            // In a real implementation, this would involve complex backend logic
+
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `
+                <h2>Search Results</h2>
+                <p>Searching for properties in ${location} with a budget of $${budget}</p>
+                <p>Minimum ${bedrooms} bedrooms and ${bathrooms} bathrooms</p>
+                <p>Plan selected: ${plan}</p>
+                <p>AI analysis and property listings would appear here.</p>
+            `;
+
+            // Placeholder for setting up alerts
+            alert("Alerts have been set up for your search criteria.");
+        }
+    </script>
+</body>
+</html>
